@@ -21,18 +21,22 @@ public class Pessoa {
 
 
     public String getNome() {
+        
         return nome;
     }
 
     public void setNome(String nome) {
+        
         this.nome = nome;
     }
 
     public String getCpf() {
+        
         return cpf;
     }
 
     public void setCpf(String cpf) {
+        
         this.cpf = cpf;
     }
 
@@ -41,9 +45,9 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa{" +
-                "nome='" + nome + '\'' +
-                ", cpf='" + cpf + '\'' +
-                '}';
+       StringBuilder dados = new StringBuilder();
+       dados.append("\t Nome " + getNome());
+       dados.append("\t CPF" + getCpf() + "\t");
+       return dados.toString();
     }
 }
